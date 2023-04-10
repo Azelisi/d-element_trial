@@ -1,0 +1,13 @@
+.map {
+  margin-bottom: 96px;
+
+  &__wrapper {
+    height: 480px;
+    background-color: $color-blue-5;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

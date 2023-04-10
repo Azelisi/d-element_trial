@@ -1,0 +1,50 @@
+.team {
+  color: $color-default-white;
+  background-color: $color-blue-2;
+  border-radius: 0 200px 0 0;
+
+  @include viewport--sm {
+    margin-right: 30px;
+  }
+
+  &__wrapper {
+    position: relative;
+
+    &::after {
+      @include pseudo();
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: calc(100% - 197px);
+      height: 1px;
+      margin-right: 197px;
+      background-color: rgba(255, 255, 255, 0.4);
+
+      @include viewport--sm {
+        width: calc(100% - 30px);
+      }
+    }
+  }
+
+  &__inner-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 75px;
+    padding-bottom: 84px;
+    padding-left: 79px;
+
+    @include viewport--sm {
+      padding-left: 30px;
+    }
+  }
+
+  &__column {
+    max-width: 477px;
+  }
+
+  &__button {
+    align-self: center;
+  }
+}

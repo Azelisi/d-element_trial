@@ -17,14 +17,12 @@
     "gulp-concat": "^2.6.1",
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^7.1.0",
-    "gulp-pug": "^5.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-uglify-es": "^3.0.0",
     "sass": "^1.61.0",
     "stylelint": "^15.4.0",
-    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-recommended": "^11.0.0",
     "stylelint-config-standard": "^32.0.0",
-    "stylelint-config-standard-scss": "^7.0.1",
     "stylelint-order": "^6.0.3",
     "stylelint-scss": "^4.6.0"
   }

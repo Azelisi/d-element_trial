@@ -1,0 +1,111 @@
+.clients {
+  padding-top: 79px;
+  padding-bottom: 125px;
+  color: $color-default-white;
+  background-color: $color-blue-4;
+  border-radius: 200px 0 0 0;
+  letter-spacing: 0.8px;
+
+  &__inner-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 70px;
+    padding-left: 9px;
+
+    @include viewport--md {
+      display: flex;
+      flex-direction: column;
+      padding-right: 0;
+      padding-left: 55px;
+    }
+  }
+
+  &__text {
+    max-width: 540px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include list-reset();
+    margin: 77px 0 0;
+
+    @include viewport--md {
+      min-width: 710px;
+      justify-content: center;
+    }
+
+    @include viewport--sm {
+      min-width: 300px;
+      margin-top: 20px;
+    }
+  }
+
+  &__item {
+    padding: 40px 20px;
+    flex-basis: 235px;
+    @include text(20px, 46px, 600);
+    text-align: center;
+    flex-grow: 1;
+
+    &:last-child {
+      border-right: none;
+      background-color: rgba(12%, 25%, 41%, 0.2);
+    }
+
+    @media (min-width: 1015px) {
+      &:not(:nth-child(4n + 1)) {
+        border-left: $border-white-04;
+      }
+
+      &:nth-child(n + 5) {
+        border-top: $border-white-04;
+      }
+    }
+
+    @media (min-width: $viewport--md) and (max-width: 1014px){
+      &:nth-child(n + 4) {
+        border-top: $border-white-04;
+      }
+
+      &:not(:nth-child(3n)) {
+        border-right: $border-white-04;
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+    @media (min-width: 545px) and (max-width: $viewport--md - 1) {
+      &:nth-child(n + 3) {
+        border-top: $border-white-04;
+      }
+
+      &:nth-child(even) {
+        border-left: $border-white-04;
+      }
+    }
+
+    @media (max-width: 544px) {
+      &:not(:last-child) {
+        border-bottom: $border-white-04;
+      }
+    }
+  }
+
+  &__link {
+    transition: $default-transition-settings;
+
+    &:hover {
+      display: block;
+      color: $color-blue-1;
+      transform: scale(1.1);
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}

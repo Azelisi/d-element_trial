@@ -1,0 +1,25 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  min-height: 56px;
+  min-width: 220px;
+  max-width: 350px;
+  text-align: center;
+  color: $color-default-white;
+  border: 0;
+  border-radius: 10px;
+  background-color: $color-blue-4;
+  box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+  transition: $default-transition-settings;
+
+  &:hover {
+    background-color: $color-blue-1;
+    transform: scale(1.1);
+  }
+
+  &:active {
+    color: $color-blue-5;
+  }
+}

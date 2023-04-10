@@ -1,52 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
+  <head>
+    <title>Afrianska</title>
     <meta charset="utf-8">
-
-    <title>D-element</title>
-    <meta name="description" content="">
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <link rel="shortcut icon" href="images/favicon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/x-icon" sizes="32x32" href="images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-
-    <!-- Chrome, Firefox OS and Opera -->
-    <meta name="theme-color" content="#1f3f68">
-    <!-- Windows Phone -->
-    <meta name="msapplication-navbutton-color" content="#1f3f68">
-    <!-- iOS Safari -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="#1f3f68">
-</head>
-
-<body>
-    <div class="wrapper">
-        <header class="header">
-            <div class="header__wrapper"><a href="#" class="header__logo">
-                    <img src="images/logo.svg" alt="logo"></a>
-                <nav class="main-nav">
-                    <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню"
-                        aria-pressed="false"></button>
-                    <div class="main-nav__wrapper">
-                        <ul class="main-nav__list">
-                            <li><a class="main-nav__link" href="#">Contact us</a></li>
-                            <li><a class="main-nav__link" href="#">Blog</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-    </div>
-    </header>
-    
-    <link href="//db.onlinewebfonts.com/c/d1243736bfe07b546f8f1e54e7804afb?family=Galien" rel="stylesheet"
-        type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Afrianska - New Automation Tool">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preload" href="fonts/Gilroy-Regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/lusitana-bold.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div style="display:none" ><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="arrow" viewBox="0 0 16 16">
+        <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z"/>
+        </symbol><symbol id="icon-cross" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.60645 7.48529L2.12109 0L0 2.12132L7.48535 9.60649L0.121094 16.9706L2.24219 19.0919L9.60645 11.7277L16.9707 19.0919L19.0918 16.9706L11.7275 9.60649L19.2129 2.12132L17.0918 0L9.60645 7.48529Z" fill="#5A98D0"/>
+        </symbol><symbol id="icon-mail" viewBox="0 0 20 16">
+        <path d="M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM18 4L10 9L2 4V2L10 7L18 2V4Z"/>
+        </symbol><symbol id="icon-phone" viewBox="0 0 18 18">
+        <path d="M3.62 7.79C5.06 10.62 7.38 12.93 10.21 14.38L12.41 12.18C12.68 11.91 13.08 11.82 13.43 11.94C14.55 12.31 15.76 12.51 17 12.51C17.55 12.51 18 12.96 18 13.51V17C18 17.55 17.55 18 17 18C7.61 18 0 10.39 0 1C0 0.45 0.45 0 1 0H4.5C5.05 0 5.5 0.45 5.5 1C5.5 2.25 5.7 3.45 6.07 4.57C6.18 4.92 6.1 5.31 5.82 5.59L3.62 7.79Z"/>
+        </symbol><symbol id="icon-www" viewBox="0 0 20 20">
+        <path d="M9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM16.92 6H13.97C13.65 4.75 13.19 3.55 12.59 2.44C14.43 3.07 15.96 4.35 16.92 6ZM10 2.04C10.83 3.24 11.48 4.57 11.91 6H8.09C8.52 4.57 9.17 3.24 10 2.04ZM2.26 12C2.1 11.36 2 10.69 2 10C2 9.31 2.1 8.64 2.26 8H5.64C5.56 8.66 5.5 9.32 5.5 10C5.5 10.68 5.56 11.34 5.64 12H2.26ZM3.08 14H6.03C6.35 15.25 6.81 16.45 7.41 17.56C5.57 16.93 4.04 15.66 3.08 14ZM6.03 6H3.08C4.04 4.34 5.57 3.07 7.41 2.44C6.81 3.55 6.35 4.75 6.03 6ZM10 17.96C9.17 16.76 8.52 15.43 8.09 14H11.91C11.48 15.43 10.83 16.76 10 17.96ZM12.34 12H7.66C7.57 11.34 7.5 10.68 7.5 10C7.5 9.32 7.57 8.65 7.66 8H12.34C12.43 8.65 12.5 9.32 12.5 10C12.5 10.68 12.43 11.34 12.34 12ZM12.59 17.56C13.19 16.45 13.65 15.25 13.97 14H16.92C15.96 15.65 14.43 16.93 12.59 17.56ZM14.36 12C14.44 11.34 14.5 10.68 14.5 10C14.5 9.32 14.44 8.66 14.36 8H17.74C17.9 8.64 18 9.31 18 10C18 10.69 17.9 11.36 17.74 12H14.36Z"/>
+        </symbol><symbol id="logo-with-text" viewBox="0 0 188 48">
+        <path d="M81.2 31.0811L74.116 11.4811H70.252L63.14 31.0811H66.64L68.012 27.1331H76.356L77.728 31.0811H81.2ZM72.184 15.2611L75.292 24.1091H69.076L72.184 15.2611ZM90.5702 11.1171C86.4262 10.8651 84.2422 12.9651 84.2422 16.8011V17.0811H82.1142V19.9931H84.2422V31.0811H87.2662V19.9931H90.5702V17.0811H87.2662V16.8011C87.2662 14.7571 88.3582 13.8331 90.5702 14.0291V11.1171ZM95.9236 17.0811H92.8996V31.0811H95.9236V24.0251C95.9236 22.5971 96.3436 21.5611 97.2116 20.9451C98.0796 20.3011 99.0876 20.0211 100.236 20.1051V16.8291C98.1356 16.8291 96.6796 17.6971 95.9236 19.4331V17.0811ZM105.886 14.4211C106.67 13.6371 106.67 12.4611 105.914 11.7051C105.158 10.9211 103.926 10.9211 103.17 11.7051C102.414 12.4611 102.414 13.6371 103.17 14.4211C103.954 15.1771 105.13 15.1771 105.886 14.4211ZM106.054 31.0811V17.0811H103.03V31.0811H106.054ZM121.213 19.0691C120.065 17.5011 118.441 16.7171 116.313 16.7171C114.381 16.7171 112.757 17.4171 111.385 18.8451C110.013 20.2731 109.341 22.0091 109.341 24.0811C109.341 26.1251 110.013 27.8891 111.385 29.3171C112.757 30.7451 114.381 31.4451 116.313 31.4451C118.441 31.4451 120.065 30.6611 121.213 29.0651V31.0811H124.237V17.0811H121.213V19.0691ZM113.625 27.3011C112.785 26.4331 112.365 25.3691 112.365 24.0811C112.365 22.7931 112.785 21.7291 113.625 20.8891C114.465 20.0211 115.529 19.6011 116.789 19.6011C118.049 19.6011 119.113 20.0211 119.953 20.8891C120.793 21.7291 121.213 22.7931 121.213 24.0811C121.213 25.3691 120.793 26.4331 119.953 27.3011C119.113 28.1411 118.049 28.5611 116.789 28.5611C115.529 28.5611 114.465 28.1411 113.625 27.3011ZM135.686 16.7171C133.698 16.7171 132.27 17.4451 131.346 18.8731V17.0811H128.322V31.0811H131.346V23.5771C131.346 20.8611 132.774 19.5451 134.902 19.5451C136.834 19.5451 138.038 20.6931 138.038 22.7931V31.0811H141.062V22.4851C141.062 18.9011 138.906 16.7171 135.686 16.7171ZM147.594 20.9451C147.594 19.9651 148.49 19.4611 149.638 19.4611C150.898 19.4611 151.794 19.9931 152.27 21.0571L154.818 19.6291C153.838 17.8091 151.962 16.7171 149.638 16.7171C148.182 16.7171 146.95 17.1091 145.97 17.8931C144.99 18.6771 144.514 19.7131 144.514 21.0011C144.458 23.9411 147.286 24.7811 149.386 25.3131C150.87 25.6771 152.046 26.2091 152.046 27.1051C152.046 28.1411 151.262 28.6731 149.666 28.6731C148.07 28.6731 147.034 28.0011 146.558 26.6571L143.954 28.1691C144.85 30.2131 146.894 31.4451 149.666 31.4451C151.234 31.4451 152.522 31.0531 153.558 30.2971C154.594 29.5411 155.126 28.4771 155.126 27.1331C155.182 24.1371 152.382 23.2411 150.226 22.7651C148.77 22.3451 147.594 21.8691 147.594 20.9451ZM164.172 23.9411L170.332 17.0811H166.636L161.204 23.2691V11.4811H158.18V31.0811H161.204V24.6131L166.944 31.0811H170.556L164.172 23.9411ZM183.117 19.0691C181.969 17.5011 180.345 16.7171 178.217 16.7171C176.285 16.7171 174.661 17.4171 173.289 18.8451C171.917 20.2731 171.245 22.0091 171.245 24.0811C171.245 26.1251 171.917 27.8891 173.289 29.3171C174.661 30.7451 176.285 31.4451 178.217 31.4451C180.345 31.4451 181.969 30.6611 183.117 29.0651V31.0811H186.141V17.0811H183.117V19.0691ZM175.529 27.3011C174.689 26.4331 174.269 25.3691 174.269 24.0811C174.269 22.7931 174.689 21.7291 175.529 20.8891C176.369 20.0211 177.433 19.6011 178.693 19.6011C179.953 19.6011 181.017 20.0211 181.857 20.8891C182.697 21.7291 183.117 22.7931 183.117 24.0811C183.117 25.3691 182.697 26.4331 181.857 27.3011C181.017 28.1411 179.953 28.5611 178.693 28.5611C177.433 28.5611 176.369 28.1411 175.529 27.3011Z" fill="white"/>
+        <circle cx="16" cy="24" r="16" fill="#98C3E8"/>
+        <circle cx="32" cy="24" r="15" fill="white" stroke="#316099" stroke-width="2"/>
+        <path d="M38.3 31L33.38 17H29.96L25.06 31H28.04L28.88 28.48H34.46L35.3 31H38.3ZM31.68 20.18L33.6 25.9H29.76L31.68 20.18Z" fill="#316099"/>
+        </symbol><symbol id="logo">
+          <circle cx="16" cy="24" r="16" fill="#316099"/>
+          <circle cx="32" cy="24" r="15" fill="#fff" stroke="#316099" stroke-width="2"/>
+          <path d="M39.3 30l-4.92-14h-3.42l-4.9 14h2.98l.84-2.52h5.58L36.3 30h3zm-6.62-10.82l1.92 5.72h-3.84l1.92-5.72z" fill="#316099"/>
+        </symbol></svg>
+            </div>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__wrapper"><a class="header__logo">
+            <svg width="48" height="48" aria-hidden="true">
+              <use xlink:href="#logo"></use>
+            </svg></a>
+          <nav class="main-nav">
+            <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false"></button>
+            <div class="main-nav__wrapper">
+              <ul class="main-nav__list">
+                <li><a class="main-nav__link" href="#"></a></li>
+                <li><a class="main-nav__link" href="#"></a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <section class="first-screen">
+        <div class="first-screen__wrapper">
+          <div class="first-screen__inner-wrapper container">
+            <h1 class="first-screen__title">New Automation Tool for Your Home</h1>
+            <p class="first-screen__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus tristique vulputate ultrices ut mauris tellus at. Posuere sollicitudin odio tellus elit.</p>
+            <button class="button first-screen__button" type="button">See Our Project</button>
+          </div>
+        </div>
+      </section>
+      <main>
+        <section class="features">
+          <div class="features__wrapper container">
+            <h2 class="features__title section__title">What we do to help our client grow in digital era</h2>
+            <ul class="features__list">
+              <li class="features__item features__item--home">
+                <h3 class="features__item-title">Bring Technology To Your Comfrotable Home</h3>
+                <p class="features__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><a class="features__item-link" href="#">Learn more
+                  <svg width="16" height="16" aria-hidden="true">
+                    <use xlink:href="#icon-arrow"></use>
+                  </svg></a>
+              </li>
+              <li class="features__item features__item--business">
+                <h3 class="features__item-title">Make Your business To Be Better Famous In Internet</h3>
+                <p class="features__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><a class="features__item-link" href="#">Learn more
+                  <svg width="16" height="16" aria-hidden="true">
+                    <use xlink:href="#icon-arrow"></use>
+                  </svg></a>
+              </li>
+              <li class="features__item features__item--product">
+                <h3 class="features__item-title">Build Your Digital Product That Suitable For Your Need</h3>
+                <p class="features__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><a class="features__item-link" href="#">Learn more
+                  <svg width="16" height="16" aria-hidden="true">
+                    <use xlink:href="#icon-arrow"></use>
+                  </svg></a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+      <section class="clients">
+        <div class="clients__wrapper container">
+          <div class="clients__inner-wrapper">
+            <h2 class="clients__title section__title">Our Beloved Client</h2>
+            <p class="clients__text section__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+          </div>
+          <ul class="clients__list">
+            <li class="clients__item"><a class="clients__link" href="#">LOGO CLIENT 1</a></li>
+            <li class="clients__item"><a class="clients__link" href="#">LOGO CLIENT 2</a></li>
+            <li class="clients__item"><a class="clients__link" href="#">LOGO CLIENT 3</a></li>
+            <li class="clients__item"><a class="clients__link" href="#">LOGO CLIENT 4</a></li>
+            <li class="clients__item"><a class="clients__link" href="#">LOGO CLIENT 5</a></li>
+            <li class="clients__item"><a class="clients__link" href="#">LOGO CLIENT 6</a></li>
+            <li class="clients__item"><a class="clients__link" href="#">LOGO CLIENT 7</a></li>
+            <li class="clients__item"><a class="clients__link" href="#">More Client</a></li>
+          </ul>
+        </div>
+      </section>
+      <footer class="footer footer--index">
+        <section class="team">
+          <div class="team__wrapper">
+            <div class="team__inner-wrapper container">
+              <div class="team__column">
+                <h2 class="team__title section__title">Intersted to work with our team?</h2>
+                <p class="team__text section__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+              </div><a class="team__button button" href="#" data-modal="message">Let’s Talk</a>
+            </div>
+          </div>
+        </section>
+        <div class="footer__wrapper">
+          <div class="footer__inner-wrapper container">
+            <div class="footer__column footer__column--info">
+              <svg width="188" height="48" aria-hidden="true">
+                <use xlink:href="#logo-with-text"></use>
+              </svg>
+              <ul class="footer__list footer__list--info">
+                <li>
+                  <p>A.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </li>
+                <li>
+                  <p>T.</p><a class="footer__link" href="tel:+62-812-7313-4321" type="tel">+62-812-7313-4321</a>
+                </li>
+                <li>
+                  <p>E</p><a class="footer__link" href="mailto:hello.afrian@gmail.com" type="mailto">hello.afrian@gmail.com</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__column footer__column--about">
+              <h3 class="footer__column-title">About US</h3>
+              <ul class="footer__list">
+                <li><a class="footer__link" href="#">About</a></li>
+                <li><a class="footer__link" href="#">What We Do</a></li>
+                <li><a class="footer__link" href="#">Project</a></li>
+                <li><a class="footer__link" href="#">How It Work With Us</a></li>
+              </ul>
+            </div>
+            <div class="footer__column footer__column--socials">
+              <h3 class="footer__column-title">Follow US</h3>
+              <ul class="footer__list">
+                <li><a class="footer__link" href="#">Instagram</a></li>
+                <li><a class="footer__link" href="#">Facebook</a></li>
+                <li><a class="footer__link" href="#">LinkedIn</a></li>
+                <li><a class="footer__link" href="#">Youtube</a></li>
+              </ul>
+            </div>
+            <p class="footer__copyright">2019 © Afrianska. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="modal modal--preload modal--message modal--no-scale modal--fit-content">
+      <div class="modal__wrapper">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <form class="form form--message" action="#" method="post" target="_blank">
+            <h2 class="form__title">SEND US MESSAGE</h2>
+            <div class="form__field">
+              <label>Full Name</label>
+              <input type="text" name="name" pattern="^[А-Яа-яЁёs]+$" placeholder="Your Name" required="required"/>
+            </div>
+            <div class="form__field">
+              <label>Email</label>
+              <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$" placeholder="Your Email" required="required"/>
+            </div>
+            <div class="form__field">
+              <label>Message</label>
+              <textarea name="message" placeholder="Your Message" rows="30"></textarea>
+            </div>
+            <button class="button form__button" type="submit" data-modal="success">SUBMIT</button>
+          </form>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
+            <svg width="25" height="25" aria-hidden="true">
+              <use xlink:href="#icon-cross"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal--success modal--no-scale modal--fit-content">
+      <div class="modal__wrapper">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <h2 class="modal__text">Your message has been sent successfully</h2>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
+            <svg width="25" height="25" aria-hidden="true">
+              <use xlink:href="#icon-cross"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
     <script src="js/main.min.js"></script>
-</body>
-
+  </body>
 </html>

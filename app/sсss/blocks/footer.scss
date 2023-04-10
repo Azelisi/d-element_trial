@@ -1,0 +1,105 @@
+.footer {
+  padding-right: 81px;
+  letter-spacing: 0.8px;
+  color: $color-default-white;
+
+  &--index {
+    background-color: $color-blue-4;
+  }
+
+  @include viewport--sm {
+    padding-right: 0;
+  }
+
+  &__wrapper {
+    background-color: $color-blue-2;
+
+    @include viewport--sm {
+      margin-right: 30px;
+    }
+  }
+
+  &__inner-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 94px;
+    padding-left: 80px;
+
+    @include viewport--sm {
+      padding-left: 30px;
+    }
+  }
+
+  &__column {
+    max-width: 280px;
+    margin-bottom: 25px;
+
+    &--info {
+      margin-right: 119px;
+      padding-top: 2px;
+    }
+
+    &--about {
+      margin-right: 77px;
+    }
+
+    &--socials {
+      margin-right: 119px;
+    }
+  }
+
+  &__column-title {
+    margin: 0 0 32px;
+    @include text(20px, 30px);
+    font-weight: 600;
+  }
+
+  &__list {
+    @include list-reset();
+    @include text(16px, 26px);
+
+    li {
+      margin-bottom: 16px;
+    }
+
+    &--info {
+      margin-top: 25px;
+
+      li {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 22px;
+      }
+
+      p {
+        margin: 0;
+
+        &:first-child {
+          display: block;
+          margin-right: 19px;
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    width: 100%;
+    margin: 43px 0 65px;
+    @include text(16px, 26px);
+    opacity: 0.4;
+  }
+
+  &__link {
+    transition: $default-transition-settings;
+
+    &:hover {
+      display: block;
+      color: $color-blue-4;
+      transform: translate(5px);
+    }
+
+    &:active {
+      color: $color-blue-1;
+    }
+  }
+}

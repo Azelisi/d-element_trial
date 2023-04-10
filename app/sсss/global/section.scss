@@ -1,0 +1,15 @@
+.section {
+  &__title {
+    margin-top: 14px;
+    max-width: 320px;
+    letter-spacing: 1.5px;
+    @include text(36px, 46px, 600);
+  }
+
+  &__text {
+    margin-bottom: 50px;
+    letter-spacing: 0.3px;
+    @include text(17px, 26px);
+    opacity: 0.6;
+  }
+}
