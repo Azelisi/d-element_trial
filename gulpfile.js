@@ -7,6 +7,9 @@ const browserSync = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
 const clean = require('gulp-clean');
+const gulppug = require('gulp-pug');
+
+
 
 function scripts() {
     return src([
@@ -33,10 +36,18 @@ function images() {
         .pipe(dest('dist/images'));
 }
 
+function pug() {
+    return src('app/pug/**/*.pug')
+        .pipe(gulppug())
+        .pipe(dest('app/pug/base'))
+        .pipe(browserSync.stream());
+}
+
 
 function watching() {
     watch(['app/scss/style.scss'], styles);
     watch(['app/js/main.js'], scripts);
+    watch(['app/pug/*.pug'], pug);
     watch(['app/*.html']).on('change', browserSync.reload);
 }
 
@@ -66,6 +77,7 @@ exports.styles = styles;
 exports.scripts = scripts;
 exports.watching = watching;
 exports.browsersync = browsersync;
+exports.pug = pug;
 
-exports.build = series(cleanDist, parallel(styles, scripts, images), building);
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.build = series(cleanDist, parallel(images, pug, styles, scripts,), building);
+exports.default = parallel(styles, pug, scripts, browsersync, watching);
