@@ -1,5 +1,7 @@
 const { src, dest, watch, parallel, series } = require('gulp');
 
+const gulp = require('gulp');
+const ghPages = require('gulp-gh-pages');
 const scss = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify-es').default;
@@ -64,6 +66,11 @@ function building() {
     ], { base: 'app' })
         .pipe(dest('dist'));
 }
+
+gulp.task('deploy', function () {
+    return gulp.src('./dist/**/*')
+        .pipe(ghPages());
+});
 
 exports.styles = styles;
 exports.scripts = scripts;
