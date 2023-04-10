@@ -5,6 +5,7 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify-es').default;
 const browserSync = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
+const imagemin = require('gulp-imagemin');
 const clean = require('gulp-clean');
 
 function scripts() {
@@ -26,6 +27,11 @@ function styles() {
         .pipe(browserSync.stream());
 }
 
+function images() {
+    return src('app/images/**/*')
+        .pipe(imagemin())
+        .pipe(dest('dist/images'));
+}
 
 
 function watching() {
@@ -61,5 +67,5 @@ exports.scripts = scripts;
 exports.watching = watching;
 exports.browsersync = browsersync;
 
-exports.build = series(cleanDist, building);
+exports.build = series(cleanDist, parallel(styles, scripts, images), building);
 exports.default = parallel(styles, scripts, browsersync, watching);
