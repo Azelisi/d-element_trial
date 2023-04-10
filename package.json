@@ -1,12 +1,13 @@
 {
   "name": "d-element_trial",
   "version": "1.0.0",
-  "description": "",
+  "description": "Тестовое в ЦЭ",
   "main": "index.js",
+  "repository": "https://github.com/Huinko/d-element_trial",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Egor",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.29.1",
