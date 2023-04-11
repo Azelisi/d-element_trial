@@ -7,19 +7,17 @@ const uglify = require('gulp-uglify-es').default;
 const browserSync = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
+const webpackStream = require('webpack-stream');
+const webpackConfig = require('./webpack.config.js');
 const clean = require('gulp-clean');
 
 
 
-function scripts() {
-    return src([
-        'app/js/main.js'
-    ])
-        .pipe(concat('main.min.js'))
-        .pipe(uglify())
-        .pipe(dest('app/js'))
-        .pipe(browserSync.stream());
-}
+const scripts = () => {
+    return src(['app/js/main.js'])
+        .pipe(webpackStream(webpackConfig))
+        .pipe(dest('dist/js'))
+};
 
 function styles() {
     return src('app/sсss/style.scss')
@@ -60,7 +58,7 @@ function cleanDist() {
 function building() {
     return src([
         'app/css/style.min.css',
-        'app/js/main.min.js',
+        'app/**/*.js',
         'app/**/*.html'
     ], { base: 'app' })
         .pipe(dest('dist'));
